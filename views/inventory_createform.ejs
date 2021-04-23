@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/head %>
+</head>
+<style>
+     table,th,tr,td{
+		  border-collapse: collapse;
+		  border: 1px solid #d3d3d3;
+	  }
+</style>
+
+<body>
+    <% include partials/menu1 %>
+        <div class="container-fluid bg-3 text-center">
+            <h3>
+                <%= page %>
+            </h3><br>
+            <div class="row" >
+             
+                <form action="create" method="POST" >
+                    <table class='table table-striped table-responsive-md btm-table'>
+                        <tr>
+                            <th>Profile ID : </th>
+                            <td><input type="Number" name="profileid" placeholder="profileid" required></td>
+                        </tr>
+                        <tr>
+                            <th>Inventory ID : </th>
+                            <td><input type="Number" name="inventoryid" placeholder="inventoryid" required></td>
+                        </tr>
+                        <tr>
+                            <th>Product : </th>
+                            <td><input type="text" name="product" placeholder="product" required></td>
+                        </tr>
+                        <tr>
+                            <th>Price : </th>
+                            <td><input type="Number" name="price" placeholder="price" required></td>
+                        </tr>
+                        <tr>
+                            <th>Quantity : </th>
+                            <td><input type="number" name="quantity" placeholder="quantity" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="submit" value="ADD" ></td>
+                        </tr>
+                    </table>
+                </form>
+
+
+
+            </div>
+        </div>
+
+</body>
+<% include partials/script %>
+
+</html>

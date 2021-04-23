@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+</head>
+<body>
+<% include partials/menu1 %>
+<div class="container-fluid bg-3 text-center">    
+  <h3><%= page %></h3><br>
+  <div class="row">
+    <table class='table table-striped table-responsive-md btm-table'>
+        <thead>
+            <tr>
+                <th>Profile ID</th>
+                <th>Inventory ID</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% inventories.forEach(function(inventory){ %>
+                <tr>
+                    <td><%=inventory.profileid %></td>
+                    <td><%=inventory.inventoryid %></td>
+                    <td><%=inventory.product %></td>
+                    <td><%=inventory.price %></td>
+                    <td><%=inventory.quantity %></td>
+                    <td>
+                        <form action='updateform/<%=inventory._id %>' method="POST">
+                            <button type="submit">Update</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action='/inventories/<%=inventory._id %>/delete ' method="POST">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                                
+                </tr>
+             <% });  %>   
+        </tbody>
+    </table>
+    <form action='/inventories/createform' method="POST">
+        <button type="submit">Add Inventory</button>
+   </form>
+  </div>
+</div>
+</body>
+<% include partials/script %>
+</html>

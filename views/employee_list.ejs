@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+</head>
+<body>
+<% include partials/menu1 %>
+<div class="container-fluid bg-3 text-center">    
+  <h3><%= page %></h3><br>
+  <div class="row">
+    <table class='table table-striped table-responsive-md btm-table'>
+        <thead>
+            <tr>
+                <th>Profile ID</th>
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Contact Number</th>
+                <th>Address</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% employees.forEach(function(employee){ %>
+                <tr>
+                    <td><%=employee.profileid %></td>
+                    <td><%=employee.employeeid %></td>
+                    <td><%=employee.name %></td>
+                    <td><%=employee.gender %></td>
+                    <td><%=employee.contactnumber %></td>
+                    <td><%=employee.address %></td>
+                    <td>
+                        <form action='updateform/<%=employee._id %>' method="POST">
+                            <button type="submit">Update</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action='/employees/<%=employee._id %>/delete ' method="POST">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                                
+                </tr>
+             <% });  %>   
+        </tbody>
+    </table>
+    <form action='/employees/createform' method="POST">
+        <button type="submit">Add Employee</button>
+   </form>
+  </div>
+</div>
+</body>
+<% include partials/script %>
+</html>

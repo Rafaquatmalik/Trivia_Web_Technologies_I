@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<% include partials/head %>
+	</head>
+	<style>
+		table,
+		th,
+		tr,
+		td {
+			border-collapse: collapse;
+			border: 1px solid #d3d3d3;
+		}
+	</style>
+
+	<body>
+		<% include partials/menu1 %>
+		<div class="container-fluid bg-3 text-center">
+			<h3><%= page %></h3>
+			<br />
+			<div class="row">
+				<form action="./<%=user._id %>/update" method="POST">
+					<table class="table table-striped table-responsive-md btm-table">
+						<tr>
+							<th>User Name :</th>
+							<td><input type="text" name="username" placeholder="username" readonly value="<%=user.username %>" /></td>
+						</tr>
+						<tr>
+							<th>Password :</th>
+							<td><input type="text" name="password" placeholder="password" required value="<%=user.password%>" /></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="submit" value="Save" /></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</body>
+	<% include partials/script %>
+</html>
