@@ -9,7 +9,7 @@
 
 **Dashboard Screen**
        
-       **** Profile Management****
+       ** Profile Management**
                  Edit Profile
                  Change Password
                   
@@ -18,18 +18,18 @@
        **  Inventory  Management**
                  Add, Update,  Delete Inventory
    
-      ** Supplier Management**
+       ** Supplier Management**
                 Add, Update, Delete Supplier
 
-      **Employee Management**
+       **Employee Management**
                 Add, Update, Delete Employee
 
-      **Transaction Management**
+       **Transaction Management**
                 Add, Update, Delete Transaction
                       
 **MANDATORY REQUIREMENTS:**
       INCLUDE SESSION MANAGEMENT
       INCLUDE NAVIGATION, PARTIAL VIEWS
-      USER INTERFACE IS ALSO IMPORTAN
+      USER INTERFACE IS ALSO IMPORTANT
 
 
