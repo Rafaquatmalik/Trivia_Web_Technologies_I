@@ -1,2 +1,11 @@
-# Trivia_Web_Technologies_I
-Exhibit-C Story Board 
+Trivia_Web_Technologies_I
+Exhibit-C Story Board
+
+
+Start
+
+MANDATORY REQUIREMENTS:
+INCLUDE NAVIGATION, VALIDATION, PARTIAL VIEWS
+INCLUDE SESSION MANAGEMENT
+USER INTERFACE IS ALSO IMPORTANT
+
